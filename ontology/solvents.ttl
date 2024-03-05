@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix csvw: <http://www.w3.org/ns/csvw#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix emmo: <http://emmo.info/emmo#> .
+@prefix emmo: <https://w3id.org/emmo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -16,13 +16,13 @@
 
 <http://ontotrans.eu/meta/1.0/solvents> rdf:type owl:Ontology ;
                                          owl:versionIRI <http://ontotrans.eu/meta/1.0/solvents> ;
-                                         owl:imports <http://emmo.info/emmo/1.0.0-beta5/mereocausality> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/disciplines/computerscience> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/disciplines/isq> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/disciplines/manufacturing> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/disciplines/models> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/perspectives/holistic> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta5/perspectives/physicalistic> ;
+                                         owl:imports <http://emmo.info/emmo/1.0.0-beta7/mereocausality> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/computerscience> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/isq> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/manufacturing> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/models> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/perspectives/holistic> ,
+                                                     <http://emmo.info/emmo/1.0.0-beta7/perspectives/physicalistic> ;
                                          dcterms:abstract "Ontology describing experimental and simulated properties of solvents."@en ;
                                          dcterms:contributor "Goldbeck Consulting Ltd (UK)" ;
                                          dcterms:created "2023-10-16" ;
@@ -68,40 +68,6 @@ dcterms:title rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://emmo.info/emmo#EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
-emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a skos:altLabel "PotEng" .
-
-
-###  http://emmo.info/emmo#EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
-emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989 skos:altLabel "Press" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989 ;
-   owl:annotatedProperty skos:altLabel ;
-   owl:annotatedTarget "Press" ;
-   emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Label used in the LAMMPS thermodynamical output."
- ] .
-
-
-###  http://emmo.info/emmo#EMMO_830b59f7_d047_438c_90cd_62845749efcb
-emmo:EMMO_830b59f7_d047_438c_90cd_62845749efcb skos:altLabel "TotEng" .
-
-
-###  http://emmo.info/emmo#EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
-emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed skos:altLabel "KinEng" .
-
-
-###  http://emmo.info/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
-emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f skos:altLabel "Temp" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f ;
-   owl:annotatedProperty skos:altLabel ;
-   owl:annotatedTarget "Temp" ;
-   emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Label used in the LAMMPS thermodynamical output."
- ] .
-
-
 ###  http://ontotrans.eu/meta/1.0/solvents#AngleEnergy
 :AngleEnergy rdf:type owl:Class ;
              rdfs:subClassOf emmo:EMMO_31ec09ba_1713_42cb_83c7_b38bf6f9ced2 ;
@@ -132,18 +98,18 @@ emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f skos:altLabel "Temp" .
 ###  http://ontotrans.eu/meta/1.0/solvents#CoulombEnergyLong
 :CoulombEnergyLong rdf:type owl:Class ;
                    rdfs:subClassOf emmo:EMMO_31ec09ba_1713_42cb_83c7_b38bf6f9ced2 ;
-                   emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Long-range contribution to the Coulomb energy, computed in the reciprocal space (K-space).
-The total Coulomb energy for a periodic system can be computed with a long-range solver such as the Ewald summation, Particle-Particle-Particle-Mesh, and alikes, and is the sum of the short + long range terms."""@en ;
                    skos:altLabel "E_long" ;
-                   skos:prefLabel "CoulombEnergyLong" .
+                   skos:prefLabel "CoulombEnergyLong" ;
+                   emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Long-range contribution to the Coulomb energy, computed in the reciprocal space (K-space).
+The total Coulomb energy for a periodic system can be computed with a long-range solver such as the Ewald summation, Particle-Particle-Particle-Mesh, and alikes, and is the sum of the short + long range terms."""@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#CoulombEnergyShort
 :CoulombEnergyShort rdf:type owl:Class ;
                     rdfs:subClassOf emmo:EMMO_31ec09ba_1713_42cb_83c7_b38bf6f9ced2 ;
-                    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coulombic pairwise energy, including only the contribution from the real space, usually within a cut-off radius."@en ;
                     skos:altLabel "E_coul" ;
-                    skos:prefLabel "CoulombEnergyShort" .
+                    skos:prefLabel "CoulombEnergyShort" ;
+                    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Coulombic pairwise energy, including only the contribution from the real space, usually within a cut-off radius."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#DihedralEnergy
@@ -156,8 +122,8 @@ The total Coulomb energy for a periodic system can be computed with a long-range
 ###  http://ontotrans.eu/meta/1.0/solvents#ExperimentalDataset
 :ExperimentalDataset rdf:type owl:Class ;
                      rdfs:subClassOf emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
-                     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A collection of physical obserbables obtained from experimental measurements, characteristic of a certain material."@en ;
-                     skos:prefLabel "ExperimentalDataset" .
+                     skos:prefLabel "ExperimentalDataset" ;
+                     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A collection of physical obserbables obtained from experimental measurements, characteristic of a certain material."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#ImproperEnergy
@@ -192,16 +158,16 @@ The total Coulomb energy for a periodic system can be computed with a long-range
                           owl:onProperty emmo:EMMO_24c71baf_6db6_48b9_86c8_8c70cf36db0c ;
                           owl:someValuesFrom emmo:EMMO_84cadc45_6758_46f2_ba2a_5ead65c70213
                         ] ;
+        skos:prefLabel "LAMMPS" ;
         emmo:EMMO_1246b120_abbe_4840_b0f8_3e4348b24a17 "https://lammps.org" ;
         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.
 
-LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale."""@en ;
-        skos:prefLabel "LAMMPS" .
+LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale."""@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#LAMMPSLog
 :LAMMPSLog rdf:type owl:Class ;
-           rdfs:subClassOf <http://emmo.info/emmo#52867015_cd2b_4697_8c8f_3acb32c13587> ,
+           rdfs:subClassOf emmo:EMMO_998dd3a0_c85f_4c8d_9fb8_816a93cc3bb8 ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty emmo:EMMO_4832e353_6a2d_4deb_9a5b_96989afaff2d ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -212,26 +178,26 @@ LAMMPS has potentials for solid-state materials (metals, semiconductors) and sof
 ###  http://ontotrans.eu/meta/1.0/solvents#MeanSquaredDisplacement
 :MeanSquaredDisplacement rdf:type owl:Class ;
                          rdfs:subClassOf emmo:EMMO_4024a7f8_2991_4d80_bcc9_63705aa0c750 ;
+                         skos:prefLabel "MeanSquaredDisplacement" ,
+                                        "v_msqdis" ;
                          emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Total mean-squared displacement (MSD), i.e.
 (dx*dx + dy*dy + dz*dz)
-Here the MSD is computed on the centre-of-mass of each molecule insted of on the individual atoms, as to measure the self-diffusion coefficient of an isotropic liquid.""" ;
-                         skos:prefLabel "MeanSquaredDisplacement" ,
-                                        "v_msqdis" .
+Here the MSD is computed on the centre-of-mass of each molecule insted of on the individual atoms, as to measure the self-diffusion coefficient of an isotropic liquid.""" .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#MeanSquaredDisplacementSingle
 :MeanSquaredDisplacementSingle rdf:type owl:Class ;
                                rdfs:subClassOf :MeanSquaredDisplacement ;
-                               emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Mean-squared displacement computed and averaged for individual atoms in a group. The output is a four-component vector whose dimensions are:
-c_msqdis[1] = dx*dx
-c_msqdis[2] = dy*dy
-c_msqdis[3] = dz*dz
-c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                skos:altLabel "c_msqdis[1]" ,
                                              "c_msqdis[2]" ,
                                              "c_msqdis[3]" ,
                                              "c_msqdis[4]" ;
-                               skos:prefLabel "MeanSquaredDisplacementSingle" .
+                               skos:prefLabel "MeanSquaredDisplacementSingle" ;
+                               emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Mean-squared displacement computed and averaged for individual atoms in a group. The output is a four-component vector whose dimensions are:
+c_msqdis[1] = dx*dx
+c_msqdis[2] = dy*dy
+c_msqdis[3] = dz*dz
+c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#Solute
@@ -242,9 +208,9 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                          ] ;
                           owl:someValuesFrom emmo:EMMO_2031516a_2be7_48e8_9af7_7e1270e308fe
                         ] ;
+        skos:prefLabel "Solute" ;
         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A substance that is dissolved by a solvent is called the solute. The solute and the solvent can be solids, liquids, or gases."@en ;
-        emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Water is a liquid solvent that can dissolve salt (a solid solute) or oxygen (a gas solute)."@en ;
-        skos:prefLabel "Solute" .
+        emmo:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "Water is a liquid solvent that can dissolve salt (a solid solute) or oxygen (a gas solute)."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#Solvent
@@ -255,13 +221,18 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                           ] ;
                            owl:someValuesFrom emmo:EMMO_2031516a_2be7_48e8_9af7_7e1270e308fe
                          ] ;
-         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A solvent is a substance that can loosen, dissolve, or disperse another substance, forming a solution. A solvent can be a liquid, a solid, a gas, or a supercritical fluid. The substance that is dissolved by the solvent is called the solute."@en ;
-         skos:prefLabel "Solvent" .
+         skos:prefLabel "Solvent" ;
+         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A solvent is a substance that can loosen, dissolve, or disperse another substance, forming a solution. A solvent can be a liquid, a solid, a gas, or a supercritical fluid. The substance that is dissolved by the solvent is called the solute."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#SolventExperimentalDS
 :SolventExperimentalDS rdf:type owl:Class ;
                        rdfs:subClassOf :ExperimentalDataset ,
+                                       :Spreadsheet ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:someValuesFrom :SpeedOfSound
+                                       ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
                                          owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
@@ -307,10 +278,6 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                          owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                         owl:someValuesFrom :SpeedOfSound
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty [ owl:inverseOf emmo:EMMO_eb3518bf_f799_4f9e_8c3e_ce59af11453b
                                                         ] ;
                                          owl:someValuesFrom :benzene
@@ -325,16 +292,23 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                                         ] ;
                                          owl:someValuesFrom :water
                                        ] ;
-                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A set of selected thermodynamic properties for three solvents: benzene, water, and hexane."@en ;
-                       skos:prefLabel "SolventExperimentalDS" .
+                       skos:prefLabel "SolventExperimentalDS" ;
+                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A set of selected thermodynamic properties for three solvents: benzene, water, and hexane, stored in a spreadsheet."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#SpeedOfSound
 :SpeedOfSound rdf:type owl:Class ;
               rdfs:subClassOf emmo:EMMO_81369540_1b0e_471b_9bae_6801af22800e ;
+              skos:prefLabel "SpeedOfSound" ;
               emmo:EMMO_1f1b164d_ec6a_4faa_8d5e_88bda62316cc "https://qudt.org/vocab/quantitykind/SpeedOfSound" ;
-              emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The speed of sound is the distance travelled during a unit of time by a sound wave propagating through an elastic medium."@en ;
-              skos:prefLabel "SpeedOfSound" .
+              emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The speed of sound is the distance travelled during a unit of time by a sound wave propagating through an elastic medium."@en .
+
+
+###  http://ontotrans.eu/meta/1.0/solvents#Spreadsheet
+:Spreadsheet rdf:type owl:Class ;
+             rdfs:subClassOf emmo:EMMO_998dd3a0_c85f_4c8d_9fb8_816a93cc3bb8 ;
+             skos:prefLabel "Spreadsheet" ;
+             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A class of files covering various formats (CSV, ODS, XLS, XLSX, DIF) storing data in the form of tables."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#Step
@@ -344,24 +318,24 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                         owl:onProperty emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 ;
                         owl:allValuesFrom xsd:int
                       ] ;
-      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of repetitions of a certain task." ;
-      skos:prefLabel "Step" .
+      skos:prefLabel "Step" ;
+      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of repetitions of a certain task." .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#Timestep
 :Timestep rdf:type owl:Class ;
           rdfs:subClassOf emmo:EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a ,
                           emmo:EMMO_d4f7d378_5e3b_468a_baa1_a7e98358cda7 ;
-          emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A timestep is a number (in time units) used to integrate numerically the equations of motion in a subsequent molecular dynamics simulation."@en ;
-          skos:prefLabel "Timestep" .
+          skos:prefLabel "Timestep" ;
+          emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A timestep is a number (in time units) used to integrate numerically the equations of motion in a subsequent molecular dynamics simulation."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#TotalEnergy
 :TotalEnergy rdf:type owl:Class ;
              rdfs:subClassOf emmo:EMMO_31ec09ba_1713_42cb_83c7_b38bf6f9ced2 ;
-             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total energy in a molecular dynamic simulation, corresponding to the sum of the potential and kinetic energies."@en ;
              skos:altLabel "TotEng" ;
-             skos:prefLabel "TotalEnergy" .
+             skos:prefLabel "TotalEnergy" ;
+             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total energy in a molecular dynamic simulation, corresponding to the sum of the potential and kinetic energies."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#UnitedAtoms
@@ -372,39 +346,15 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
 
 ###  http://ontotrans.eu/meta/1.0/solvents#benzene
 :benzene rdf:type owl:Class ;
-         rdfs:subClassOf emmo:EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 ,
-                         :Solvent ;
+         rdfs:subClassOf :Solvent ,
+                         emmo:EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 ;
          skos:prefLabel "benzene" .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#benzeneLogAtomistic
 :benzeneLogAtomistic rdf:type owl:Class ;
-                     rdfs:subClassOf emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
-                                     :LAMMPSLog ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
-                                     ] ,
+                     rdfs:subClassOf :LAMMPSLog ,
+                                     emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
                                        owl:someValuesFrom :AngleEnergy
@@ -454,6 +404,30 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                        owl:someValuesFrom :vdwlEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty [ owl:inverseOf emmo:EMMO_24c71baf_6db6_48b9_86c8_8c70cf36db0c
                                                       ] ;
                                        owl:someValuesFrom emmo:EMMO_84cadc45_6758_46f2_ba2a_5ead65c70213
@@ -463,38 +437,14 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                                       ] ;
                                        owl:someValuesFrom :benzene
                                      ] ;
-                     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A particular class of LAMMPS log files referring specifically to an Atomistic Molecular Dynamics simulation of benzene in the isobaric-isothermal ensemble (NPT)."@en ;
-                     skos:prefLabel "benzeneLogAtomistic" .
+                     skos:prefLabel "benzeneLogAtomistic" ;
+                     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A particular class of LAMMPS log files referring specifically to an Atomistic Molecular Dynamics simulation of benzene in the isobaric-isothermal ensemble (NPT)."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#benzeneLogCoarseGrained
 :benzeneLogCoarseGrained rdf:type owl:Class ;
-                         rdfs:subClassOf emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
-                                         :LAMMPSLog ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
-                                         ] ,
+                         rdfs:subClassOf :LAMMPSLog ,
+                                         emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
                                            owl:someValuesFrom :BondEnergy
@@ -532,6 +482,30 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                            owl:someValuesFrom :vdwlEnergy
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty [ owl:inverseOf emmo:EMMO_24c71baf_6db6_48b9_86c8_8c70cf36db0c
                                                           ] ;
                                            owl:someValuesFrom :CoarseGrained
@@ -541,30 +515,64 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en ;
                                                           ] ;
                                            owl:someValuesFrom :benzene
                                          ] ;
-                         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A particular class of LAMMPS log files referring specifically to a Coarse-Grained Molecular Dynamics simulation of benzene in the isobaric-isothermal ensemble (NPT)." ;
-                         skos:prefLabel "benzeneLogCoarseGrained" .
+                         skos:prefLabel "benzeneLogCoarseGrained" ;
+                         emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A particular class of LAMMPS log files referring specifically to a Coarse-Grained Molecular Dynamics simulation of benzene in the isobaric-isothermal ensemble (NPT)." .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#hexane
 :hexane rdf:type owl:Class ;
-        rdfs:subClassOf emmo:EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 ,
-                        :Solvent ;
+        rdfs:subClassOf :Solvent ,
+                        emmo:EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 ;
         skos:prefLabel "hexane" .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#vdwlEnergy
 :vdwlEnergy rdf:type owl:Class ;
             rdfs:subClassOf emmo:EMMO_31ec09ba_1713_42cb_83c7_b38bf6f9ced2 ;
-            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "van der Waals pairwise energy, including contributions from Lennard-Jones, Gay-Berne and RE-squared potentials."@en ;
             skos:altLabel "E_vdwl" ;
-            skos:prefLabel "vdwlEnergy" .
+            skos:prefLabel "vdwlEnergy" ;
+            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "van der Waals pairwise energy, including contributions from Lennard-Jones, Gay-Berne and RE-squared potentials."@en .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#water
 :water rdf:type owl:Class ;
-       rdfs:subClassOf emmo:EMMO_75fe4fd1_0f7e_429b_b91d_59d248561bae ,
-                       :Solvent ;
+       rdfs:subClassOf :Solvent ,
+                       emmo:EMMO_75fe4fd1_0f7e_429b_b91d_59d248561bae ;
        skos:prefLabel "water" .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  https://w3id.org/emmo#EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
+emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a skos:altLabel "PotEng" .
+
+
+###  https://w3id.org/emmo#EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
+emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989 skos:altLabel "Press" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989 ;
+   owl:annotatedProperty skos:altLabel ;
+   owl:annotatedTarget "Press" ;
+   emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Label used in the LAMMPS thermodynamical output."
+ ] .
+
+
+###  https://w3id.org/emmo#EMMO_830b59f7_d047_438c_90cd_62845749efcb
+emmo:EMMO_830b59f7_d047_438c_90cd_62845749efcb skos:altLabel "TotEng" .
+
+
+###  https://w3id.org/emmo#EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
+emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed skos:altLabel "KinEng" .
+
+
+###  https://w3id.org/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
+emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f skos:altLabel "Temp" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f ;
+   owl:annotatedProperty skos:altLabel ;
+   owl:annotatedTarget "Temp" ;
+   emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Label used in the LAMMPS thermodynamical output."
+ ] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
