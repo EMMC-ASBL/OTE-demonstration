@@ -1,0 +1,130 @@
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix oteio: <http://emmo.info/oteio.pipeline#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Collection of experimental data taken from the NIST database."@en ;
+    oteio:hasDimension "{\"n\": \"Number of data points.\"}" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#cp> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#cv> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#density> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#enthaply> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#entropy> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#int_ene> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#phase> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#press> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#sound_speed> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#temp> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#viscosity> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/isobaric_exp#volume> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#cp> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Specific heat at constant pressure."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#cv> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Specific heat at constant volume."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#density> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mass density"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#enthaply> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Enthalpy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#entropy> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Entropy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#int_ene> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Internal energy"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#phase> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "state of matter."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#press> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Pressure"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#sound_speed> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Speed of sound in the material."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#temp> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Temperature"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#viscosity> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Viscosity"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/isobaric_exp#volume> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Specific volume"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+

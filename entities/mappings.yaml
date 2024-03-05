@@ -1,0 +1,112 @@
+---
+
+version: 1
+
+data_resources:
+
+  # Experimental dataset. IRIs of the individual in the KB.
+  http://ontotrans.eu/meta/1.0/abox#dataset-exp-all:
+    dataresource:
+      downloadUrl: file:///home/sophia/OntoTrans/oip-workshop/experimental/isobaric_liquids_nist.ods
+      mediaType: application/vnd.dlite-xlsx
+      configuration:
+        label: expds 
+        excel_config:
+            worksheet: "Benzene"
+            header_row: "1"
+            row_from: "1"
+            row_to: "2"
+
+    mapping:
+      mappingType: mappings
+      prefixes:
+        oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
+        map: http://emmo.info/domain-mappings#
+        solvents: http://ontotrans.eu/meta/1.0/solvents# 
+      triples:
+        - [oip:temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
+        - [oip:press,      map:mapsTo,  solvents:Pressure]
+        - [oip:density,    map:mapsTo,  solvents:Density]
+        - [oip:volume,     map:mapsTo,  solvents:Volume]
+        - [oip:int_ene,    map:mapsTo,  solvents:InternalEnergy]
+        - [oip:enthalpy,   map:mapsTo,  solvents:Enthalpy]
+        - [oip:cv,         map:mapsTo,  solvents:IsochoricHeatCapacity]
+        - [oip:cp,         map:mapsTo,  solvents:IsobaricHeatCapacity]
+        - [oip:sound_speed,map:mapsTo,  solvents:SpeedOfSound]
+        - [oip:viscosity,  map:mapsTo,  solvents:DynamicViscosity]
+        - [oip:phase,      map:mapsTo,  solvents:StateOfMatter]
+
+
+  # Simulated data for benzene, atomistic model.
+  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-aa:
+    dataresource:
+      downloadUrl: file:///home/sophia/OntoTrans/oip-workshop/md/aa/benzene_02.log
+      mediaType: application/vnd.dlite-parse
+      configuration:
+        driver: lammpslog
+        options: "mode=r"
+        label: benzene-lammps-aa
+
+    mapping:
+      mappingType: mappings
+      prefixes:
+        oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
+        map: http://emmo.info/domain-mappings#
+        solvents: http://ontotrans.eu/meta/1.0/solvents# 
+      triples:
+        - [oip:Step,       map:mapsTo,  solvents:Step]
+        - [oip:TotEng,     map:mapsTo,  solvents:TotalEnergy]
+        - [oip:E_vdwl,     map:mapsTo,  solvents:vdwlEnergy]
+        - [oip:E_coul,     map:mapsTo,  solvents:CoulombEnergyShort]
+        - [oip:E_long,     map:mapsTo,  solvents:CoulombEnergyLong]
+        - [oip:E_bond,     map:mapsTo,  solvents:BondEnergy]
+        - [oip:E_angle,    map:mapsTo,  solvents:AngleEnergy]
+        - [oip:E_dihed,    map:mapsTo,  solvents:DihedralEnergy]
+        - [oip:E_impro,    map:mapsTo,  solvents:ImproperEnergy]
+        - [oip:KinEng,     map:mapsTo,  solvents:KineticEnergy]
+        - [oip:PotEng,     map:mapsTo,  solvents:PotentialEnergy]
+        - [oip:Temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
+        - [oip:Press,      map:mapsTo,  solvents:Pressure]
+        - [oip:Volume,     map:mapsTo,  solvents:Volume]
+        - [oip:Density,    map:mapsTo,  solvents:Density]
+        - [oip:c_inter,    map:mapsTo,  solvents:IntermolecularEnergy]
+        - [oip:v_msdis,    map:mapsTo,  solvents:MeanSquaredDisplacement]
+        - [oip:CPU,        map:mapsTo,  solvents:CPUTime]
+
+  # Simulated data for benzene, coarse-grained model.
+  http://ontotrans.eu/meta/1.0/dataset-benzene-cg:
+    dataresource:
+      downloadUrl: file:///home/sophia/OntoTrans/oip-workshop/md/cg/benzene_01.log
+      mediaType: application/vnd.dlite-parse
+      configuration:
+        driver: lammpslog
+        options: "mode=r"
+        label: benzene-lammps-cg
+
+    mapping:
+      mappingType: mappings
+      prefixes:
+        oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
+        map: http://emmo.info/domain-mappings#
+        solvents: http://ontotrans.eu/meta/1.0/solvents# 
+      triples:
+        - [oip:Step,       map:mapsTo,  solvents:Step]
+        - [oip:TotEng,     map:mapsTo,  solvents:TotalEnergy]
+        - [oip:E_vdwl,     map:mapsTo,  solvents:vdwlEnergy]
+        - [oip:E_coul,     map:mapsTo,  solvents:CoulombEnergyShort]
+        - [oip:E_long,     map:mapsTo,  solvents:CoulombEnergyLong]
+        - [oip:E_bond,     map:mapsTo,  solvents:BondEnergy]
+        - [oip:KinEng,     map:mapsTo,  solvents:KineticEnergy]
+        - [oip:PotEng,     map:mapsTo,  solvents:PotentialEnergy]
+        - [oip:Temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
+        - [oip:Press,      map:mapsTo,  solvents:Pressure]
+        - [oip:Volume,     map:mapsTo,  solvents:Volume]
+        - [oip:Density,    map:mapsTo,  solvents:Density]
+        - [oip:c_inter,    map:mapsTo,  solvents:IntermolecularEnergy]
+        - [oip:c_msqdis1,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]
+        - [oip:c_msqdis2,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]
+        - [oip:c_msqdis3,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]
+        - [oip:c_msqdis4,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]
+        - [oip:CPU,        map:mapsTo,  solvents:CPUTime]
+
+...

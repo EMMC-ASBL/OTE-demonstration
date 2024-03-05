@@ -1,0 +1,117 @@
+{
+    "uri": "http://ontotrans.eu/meta/1.0/md_cg",
+    "description": "LAMMPS log file with the thermodynamical output of a coarse-grained molecular dynamic simulation.",
+    "dimensions": {
+        "n": "Number of data points."
+    },
+    "properties": {
+        "Step" : {
+            "type" : "int",
+            "description": "Number of steps used to integrate the equation of motions in a MD simulation.",
+            "shape": ["n"]
+        },
+        "TotEng" : { 
+            "type": "float64",
+            "description": "Total Energy",
+            "units" : "Kcal/mol",
+            "shape": ["n"]
+        },
+        "E_vdwl" : {
+            "type": "float64",
+            "description": "van der Waals pairwise energy.",
+            "units" : "Kcal/mol",
+            "shape": ["n"]
+        },
+        "E_coul" : {
+            "type": "float64",
+            "description": "Real-space Coulomb pairwise energy.",
+            "units" : "Kcal/mol",
+            "shape": ["n"]
+        },
+        "E_long" : {
+            "type": "float64",
+            "description": "Reciprocal-space Coulomb energy.",
+            "units" : "kJ/mol",
+            "shape": ["n"]
+        },
+        "E_bond" : {
+            "type": "float64",
+            "description": "Bond energy.",
+            "units" : "kcal/mol",
+            "shape": ["n"]
+
+        },
+        "KinEng" : {
+            "type" : "float64",
+            "description": "Kinetic energy.",
+            "units" : "kcal/mol",
+            "shape": ["n"]
+        },
+        "PotEng" : {
+            "type": "float64",
+            "description": "Potential energy.",
+            "units" : "kcal/mol",
+            "shape": ["n"]
+        },
+        "Temp" : {
+            "type": "float64",
+            "description": "Temperature",
+            "units" : "K",
+            "shape": ["n"]
+        },
+        "Press" : {
+            "type": "float64",
+            "description": "Pressure",
+            "units" : "atm",
+            "shape": ["n"]
+        },
+        "Volume" : {
+            "type": "float64",
+            "description": "Simulation cell volume.",
+            "units" : "Angs3",
+            "shape": ["n"]
+        },
+        "Density" : {
+            "type": "float64",
+            "description": "Mass density.",
+            "units" : "g/cm3",
+            "shape": ["n"]
+        },
+        "c_inter" : {
+            "type": "float64",
+            "description": "Intermolecular Energy.",
+            "units" : "Kcal/mol",
+            "shape": ["n"]
+        },
+        "c_msqdis1" : {
+            "type": "float64",
+            "description": "Molecular-averaged mean-square displacement, X component.",
+            "units" : "Angs2",
+            "shape": ["n"]
+        },
+         "c_msqdis2" : {
+            "type": "float64",
+            "description": "Molecular-averaged mean-square displacement, Y component.",
+            "units" : "Angs2",
+            "shape": ["n"]
+        },
+         "c_msqdis3" : {
+            "type": "float64",
+            "description": "Molecular-averaged mean-square displacement, Z component.",
+            "units" : "Angs2",
+            "shape": ["n"]
+        },
+         "c_msqdis4" : {
+            "type": "float64",
+            "description": "Molecular-averaged mean-square displacement, total.",
+            "units" : "Angs2",
+            "shape": ["n"]
+        },
+        "CPU" : {
+            "type": "float64",
+            "description": "Elapsed CPU time since start of the run.",
+            "units" : "s",
+            "shape": ["n"]
+        }
+    }
+}

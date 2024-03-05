@@ -1,0 +1,27 @@
+@prefix : <http://ontotrans.eu/meta/1.0/solvents#> .
+@prefix csvw:    <http://www.w3.org/ns/csvw#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix emmo:    <http://emmo.info/emmo#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@base <http://ontotrans.eu/meta/1.0/solvents#> .
+
+<http://ontotrans.eu/meta/1.0/solvents> rdf:type owl:Ontology ;
+                                          owl:versionIRI <http://ontotrans.eu/meta/1.0/solvents> ;
+                                          dcterms:abstract "Ontology describing experimental and simulated properties of solvents."@en ;
+                                          dcterms:contributor "Goldbeck Consulting Ltd (UK)" ;
+                                          dcterms:created "2023-10-16" ;
+                                          dcterms:creator "The OntoTrans Consortium" ;
+                                          dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
+                                          dcterms:publisher "The OntoTrans Consortium" ;
+                                          dcterms:title "Solvent Ontology"@en ;
+                                          owl:versionInfo 1.0 .
+

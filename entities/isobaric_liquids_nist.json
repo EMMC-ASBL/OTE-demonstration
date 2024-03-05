@@ -1,0 +1,82 @@
+{
+    "uri": "http://ontotrans.eu/meta/1.0/isobaric_exp",
+    "description": "Collection of experimental data taken from the NIST database.",
+    "dimensions": {
+        "n": "Number of data points."
+    },
+    "properties": {
+        "temp": {
+            "type": "float64",
+            "description": "Temperature",
+            "units" : "K",
+            "shape": ["n"]
+        },
+        "press" : { 
+            "type": "float64",
+            "description": "Pressure",
+            "units" : "atm",
+            "shape": ["n"]
+        },
+        "density" : {
+            "type": "float64",
+            "description": "Mass density",
+            "units" : "kg/m3",
+            "shape": ["n"]
+        },
+        "volume" : {
+            "type": "float64",
+            "description": "Specific volume",
+            "units" : "m3/kg",
+            "shape": ["n"]
+        },
+        "int_ene" : {
+            "type": "float64",
+            "description": "Internal energy",
+            "units" : "kJ/mol",
+            "shape": ["n"]
+        },
+        "enthalpy" : {
+            "type": "float64",
+            "description": "Enthalpy.",
+            "units" : "kJ/mol",
+            "shape": ["n"]
+
+        },
+        "entropy" : {
+            "type": "float64",
+            "description": "Entropy.",
+            "units" : "kJ/mol",
+            "shape": ["n"]
+
+        },
+        "cv" : {
+            "type": "float64",
+            "description": "Specific heat at constant volume.",
+            "units" : "J/mol*K",
+            "shape": ["n"]
+        },
+        "cp" : {
+            "type": "float64",
+            "description": "Specific heat at constant pressure.",
+            "units" : "J/mol*K",
+            "shape": ["n"]
+        },
+        "sound_speed" : {
+            "type" : "float64",
+            "description" : "Speed of sound in the material.",
+            "units" : "m/s",
+            "shape": ["n"]
+        },
+        "viscosity" : {
+            "type": "float64",
+            "description": "Viscosity",
+            "units" : "uPa*s",
+            "shape": ["n"]
+        },
+        "phase" : {
+            "type" : "string",
+            "description" : "state of matter.",
+            "shape": ["n"]
+        }
+    }
+}

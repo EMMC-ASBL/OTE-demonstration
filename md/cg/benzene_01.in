@@ -1,0 +1,19 @@
+
+
+# ----------------- Init Section -----------------
+
+include "benzene_01.in.init"
+
+
+# ----------------- Atom Definition Section -----------------
+
+read_data "benzene_01.data"
+
+# ----------------- Settings Section -----------------
+
+include "benzene_01.in.settings"
+
+
+# ----------------- Run Section -----------------
+
+include "benzene_01.in.run"

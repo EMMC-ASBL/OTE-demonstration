@@ -1,0 +1,40 @@
+
+# Set the velocity to the final temperature. 
+velocity all create ${tf} $r dist gaussian
+# Derived variables.
+# thermo interval.
+variable d       equal ${cl}*$s
+# dump interval ("sample interval" frames).
+variable dcycle  equal ${prod}/$s
+variable tcouple equal ${ts}*100
+variable pcouple equal ${ts}*1000
+
+# Physical observables.
+compute q               all property/atom quatw quati quatj quatk
+compute diameter        all property/atom shapex shapey shapez
+compute temp_trasl      all temp
+compute temp_rototrasl  all temp/asphere dof all
+compute press_trasl     all pressure temp_trasl
+compute inter           all inter/molc kspace yes
+compute msqdis all msd com yes
+
+# Output.
+thermo          $d
+thermo_style custom step etotal evdwl ecoul elong ebond ke pe temp press vol density c_inter c_msqdis[*] cpu
+thermo_modify temp temp_rototrasl press press_trasl flush yes
+
+# Trajectory.
+dump TRJ all custom ${dcycle} ${run}.dump &
+id type xu yu zu c_q[1] c_q[2] c_q[3] c_q[4] c_diameter[1] c_diameter[2] c_diameter[3] &
+vx vy vz angmomx angmomy angmomz mol
+dump_modify TRJ colname c_q[1] quatw colname c_q[2] quati colname c_q[3] quatj colname c_q[4] quatk
+
+# Thermalisation and relaxation, NPT ensemble.
+timestep 	 ${ts}
+fix             NPH all nph/asphere iso $p $p ${pcouple}
+fix_modify      NPH press press_trasl
+fix             TEMP all langevin ${tf} ${tf} ${tcouple} $r angmom 0.9
+fix_modify      TEMP temp temp_rototrasl
+run    ${prod}
+unfix NPH
+unfix TEMP

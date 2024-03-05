@@ -1,0 +1,190 @@
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix oteio: <http://emmo.info/oteio.pipeline#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://ontotrans.eu/meta/1.0/md_cg> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "LAMMPS log file with the thermodynamical output of a coarse-grained molecular dynamic simulation."@en ;
+    oteio:hasDimension "{\"n\": \"Number of data points.\"}" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#CPU> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#Density> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#E_bond> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#E_coul> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#E_long> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#E_vdwl> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#KinEng> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#PotEng> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#Press> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#Step> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#Temp> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#TotEng> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#Volume> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#c_inter> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#c_msqdis1> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#c_msqdis2> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#c_msqdis3> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        [ a owl:Restriction ;
+            owl:onClass <http://ontotrans.eu/meta/1.0/md_cg#c_msqdis4> ;
+            owl:onProperty emmo:EMMO_9b6e7ddc_bcfa_41d5_a59a_c3ed895c7aa5 ;
+            owl:qualifiedCardinality "1"^^<xsd:nonNegativeInteger> ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#CPU> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Elapsed CPU time since start of the run."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#Density> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mass density."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#E_bond> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Bond energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#E_coul> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Real-space Coulomb pairwise energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#E_long> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Reciprocal-space Coulomb energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#E_vdwl> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "van der Waals pairwise energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#KinEng> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Kinetic energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#PotEng> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Potential energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#Press> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Pressure"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#Step> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of steps used to integrate the equation of motions in a MD simulation."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#Temp> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Temperature"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#TotEng> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Energy"@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#Volume> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Simulation cell volume."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#c_inter> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Intermolecular Energy."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#c_msqdis1> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Molecular-averaged mean-square displacement, X component."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#c_msqdis2> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Molecular-averaged mean-square displacement, Y component."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#c_msqdis3> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Molecular-averaged mean-square displacement, Z component."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+
+<http://ontotrans.eu/meta/1.0/md_cg#c_msqdis4> a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Molecular-averaged mean-square displacement, total."@en ;
+    oteio:hasShape "[\"n\"]" ;
+    rdfs:subClassOf emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a .
+

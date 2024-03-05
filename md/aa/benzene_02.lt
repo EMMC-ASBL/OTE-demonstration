@@ -1,0 +1,39 @@
+# Short NPT run on a sample back-mapped from a CG simulation.
+#
+# moltemplate.sh -overlay-all -pdb benzene_01.pdb benzene_02.lt
+
+# Input variables (depend on task).
+write_once("In Init"){
+ # Input variables.
+ variable run string benzene_02
+ variable ts     equal 2       # timestep
+ variable tf     equal 300.    # Equilibrium temperature
+ variable p      equal 1.      # Equilibrium pressure
+ variable cutoff equal 12.     # For interactions in real space.
+ variable skin   equal 4.      # Skin distance for neighbour list.
+ variable cl     equal 400     # correlation length
+ variable s      equal 5       # sample interval
+ variable prod   equal 5000000 # Production steps
+
+ # PBC
+ boundary p p p
+}
+
+# Define the force field.
+import /usr/local/share/lt/aa_atb.lt
+ff = new atb_long
+
+# Single molecule definition (ATB).
+import /usr/local/share/forcefields/atb/GROMOS_54A7_ATB.lt
+import /usr/local/share/forcefields/atb/benzene_GGZZ.lt
+
+# Create the molecules.
+mol0 = new GGZZ[1000]
+
+# Task.
+import /usr/local/share/lt/aa_tasks.lt
+task = msd_molecule
+run[0] = new temperature
+run[1] = new aa_npt
+run[2] = new aa_save
+

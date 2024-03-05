@@ -1,0 +1,51 @@
+
+# Derived variables.
+# thermo interval.
+variable d       equal ${cl}*$s
+# dump interval ("sample interval" frames).
+variable dcycle  equal ${prod}/$s
+variable tcouple equal ${ts}*100
+variable pcouple equal ${ts}*1000
+
+# Minimization before starting the production.
+thermo          $d
+thermo_style custom step etotal evdwl ecoul elong ebond  eangle edihed eimp &
+ke pe temp press vol density cpu
+minimize .01 .005 1000 1000
+reset_timestep 0
+velocity all create ${tf} $r dist gaussian
+
+# Derived variables.
+# thermo interval.
+variable d       equal ${cl}*$s
+# dump interval ("sample interval" frames).
+variable dcycle  equal ${prod}/$s
+variable tcouple equal ${ts}*100
+variable pcouple equal ${ts}*1000
+
+# Physical observables.
+compute inter           all inter kspace yes
+
+# Use the COM of the molecule to compute the MSD.
+compute ac all chunk/atom molecule
+compute  msqdis all msd/chunk ac
+# average over all molecules.
+variable msqdis equal ave(c_msqdis[4])
+
+# Output.
+thermo          $d
+thermo_style custom step etotal evdwl ecoul elong ebond eangle edihed eimp &
+ke pe temp press vol density c_inter v_msqdis cpu
+thermo_modify flush yes
+
+# Trajectory.
+dump TRJ all dcd ${dcycle} ${run}.dcd
+dump_modify TRJ unwrap yes
+
+# Thermalisation and relaxation, NPT ensemble.
+timestep 	 ${ts}
+fix             NPH all nph iso $p $p ${pcouple}
+fix             TEMP all langevin ${tf} ${tf} ${tcouple} $r
+run    ${prod}
+unfix NPH
+unfix TEMP

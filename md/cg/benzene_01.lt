@@ -1,0 +1,37 @@
+# Short NPT run. 
+#
+# moltemplate.sh -atomstyle "hybrid molecular ellipsoid" -dump benzene_00.dump benzene_01.lt
+
+# Input variables (depend on task).
+write_once("In Init"){
+ # Input variables.
+ variable run string benzene_01
+ variable ts     equal 10      # timestep
+ variable tf     equal 300.    # Equilibrium temperature
+ variable p      equal 1.      # Equilibrium pressure
+ variable cutoff equal 14.     # For interactions in real space.
+ variable skin   equal 4.      # Skin distance for neighbour list.
+ variable cl     equal 400     # correlation length
+ variable s      equal 5       # sample interval
+ variable prod   equal 100000  # Production steps
+
+ # PBC
+ boundary p p p
+}
+
+# Define the force field.
+import /usr/local/share/lt/cg_molc.lt
+ff = new molc_long
+
+# Single molecule definition (MOLC).
+import /usr/local/share/forcefields/molc/benzene/GGZZ_cg_01.lt 
+
+# Create the molecules.
+mol0 = new GGZZ[1000]
+
+# Task.
+import /usr/local/share/lt/cg_tasks.lt
+task = msd_single 
+run[0] = new temperature
+run[1] = new cg_npt
+

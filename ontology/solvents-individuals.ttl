@@ -1,0 +1,144 @@
+@prefix : <http://ontotrans.eu/meta/1.0/abox#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix solvents: <http://ontotrans.eu/meta/1.0/solvents#> .
+@prefix cc-by: <https://creativecommons.org/licenses/by/> .
+@base <http://ontotrans.eu/meta/1.0/abox#> .
+
+<http://ontotrans.eu/meta/1.0/abox> rdf:type owl:Ontology ;
+                                     owl:imports <http://ontotrans.eu/meta/1.0/solvents-inferred> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://emmo.info/emmo#hasProperty
+emmo:hasProperty rdf:type owl:AnnotationProperty .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#measurementUnit
+:measurementUnit rdf:type owl:AnnotationProperty .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#value
+:value rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/accessRights
+dct:accessRights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/format
+dct:format rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+dcat:distribution rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+dcat:downloadURL rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-aa
+:dataset-benzene-aa rdf:type owl:NamedIndividual ,
+                             solvents:benzeneLogAtomistic ;
+                    rdfs:label "Dataset benzene AA" ;
+                    emmo:hasProperty :dataset-benzene-aa-timestep ;
+                    dcat:distribution :dataset-benzene-aa-distribution .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-aa-distribution
+:dataset-benzene-aa-distribution rdf:type owl:NamedIndividual ,
+                                          dcat:Distribution ;
+                                 rdfs:label "Dataset benzene AA distribution" ;
+                                 dct:accessRights "Open Access" ;
+                                 dct:format "LAMMPSLOG" ;
+                                 dct:license cc-by:4.0 ;
+                                 dcat:downloadURL "file:///home/otello/OntoTrans/oip-workshop/md/aa/benzene_02.log" .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-aa-timestep
+:dataset-benzene-aa-timestep rdf:type owl:NamedIndividual ,
+                                      solvents:Timestep ;
+                             emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "2.0"^^xsd:float ;
+                             rdfs:label "Dataset benzene AA timestep" ;
+                             :measurementUnit "femtosecond" ;
+                             :value "2" .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-cg
+:dataset-benzene-cg rdf:type owl:NamedIndividual ,
+                             solvents:benzeneLogCoarseGrained ;
+                    rdfs:label "Dataset benzene CG" ;
+                    emmo:hasProperty :dataset-benzene-cg-timestep ;
+                    dcat:distribution :dataset-benzene-cg-distribution .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-cg-distribution
+:dataset-benzene-cg-distribution rdf:type owl:NamedIndividual ,
+                                          dcat:Distribution ;
+                                 rdfs:label "Dataset benzene CG distribution" ;
+                                 dct:accessRights "Open Access" ;
+                                 dct:format "LAMMPSLOG" ;
+                                 dct:license cc-by:4.0 ;
+                                 dcat:downloadURL "file:///home/sophia/OntoTrans/oip-workshop/md/cg/benzene_01.log" .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-benzene-cg-timestep
+:dataset-benzene-cg-timestep rdf:type owl:NamedIndividual ,
+                                      solvents:Timestep ;
+                             rdfs:label "Dataset benzene CG timestep" ;
+                             :measurementUnit "femtosecond" ;
+                             :value 10 .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-exp-all
+:dataset-exp-all rdf:type owl:NamedIndividual ,
+                          solvents:SolventExperimentalDS ;
+                 rdfs:label "Dataset exp all" ;
+                 dcat:distribution :dataset-exp-all-distribution .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#dataset-exp-all-distribution
+:dataset-exp-all-distribution rdf:type owl:NamedIndividual ,
+                                       dcat:Distribution ;
+                              rdfs:label "Dataset EXP all distribution" ;
+                              dct:accessRights "Open Access" ;
+                              dct:format "ODS" ;
+                              rdfs:comment "" ;
+                              dcat:downloadURL "file:///home/sophia/OntoTrans/oip-workshop/experimental/isobaric_liquids_nist.ods" .
+
+
+###  http://ontotrans.eu/meta/1.0/abox#oip-benzene
+:oip-benzene rdf:type owl:NamedIndividual ,
+                      solvents:benzene ;
+             rdfs:label "OiP Benzene" ;
+             emmo:EMMO_39c3815d_8cae_4c8f_b2ff_eeba24bec455 :dataset-benzene-aa ,
+                                                            :dataset-benzene-cg ,
+                                                            :dataset-exp-all .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
