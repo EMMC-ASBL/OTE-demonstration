@@ -16,13 +16,13 @@
 
 <http://ontotrans.eu/meta/1.0/solvents> rdf:type owl:Ontology ;
                                          owl:versionIRI <http://ontotrans.eu/meta/1.0/solvents> ;
-                                         owl:imports <http://emmo.info/emmo/1.0.0-beta7/mereocausality> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/computerscience> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/isq> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/manufacturing> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/disciplines/models> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/perspectives/holistic> ,
-                                                     <http://emmo.info/emmo/1.0.0-beta7/perspectives/physicalistic> ;
+                                         owl:imports <https://w3id.org/emmo/1.0.0-beta7/mereocausality> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/disciplines/computerscience> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/disciplines/isq> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/disciplines/manufacturing> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/disciplines/models> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/perspectives/holistic> ,
+                                                     <https://w3id.org/emmo/1.0.0-beta7/perspectives/physicalistic> ;
                                          dcterms:abstract "Ontology describing experimental and simulated properties of solvents."@en ;
                                          dcterms:contributor "Goldbeck Consulting Ltd (UK)" ;
                                          dcterms:created "2023-10-16" ;

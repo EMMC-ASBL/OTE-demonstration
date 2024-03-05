@@ -44,7 +44,7 @@ The ontology is created using an empty template file in turtle format (TTL). Cla
 
    Which means that the the following import is needed:
    ```turtle
-   owl:imports <http://emmo.info/emmo/1.0.0-beta5/perspectives/physicalistic> ;
+   owl:imports <https://w3id.org/emmo/1.0.0-beta7/perspectives/physicalistic> ;
    ```
 
 2. Benzene is a Solvent, but also a subclass of Liquid.
