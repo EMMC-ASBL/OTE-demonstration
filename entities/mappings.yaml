@@ -23,18 +23,19 @@ data_resources:
         oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
         map: http://emmo.info/domain-mappings#
         solvents: http://ontotrans.eu/meta/1.0/solvents# 
+        emmo: https://w3id.org/emmo#
       triples:
-        - [oip:temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
-        - [oip:press,      map:mapsTo,  solvents:Pressure]
-        - [oip:density,    map:mapsTo,  solvents:Density]
-        - [oip:volume,     map:mapsTo,  solvents:Volume]
-        - [oip:int_ene,    map:mapsTo,  solvents:InternalEnergy]
-        - [oip:enthalpy,   map:mapsTo,  solvents:Enthalpy]
-        - [oip:cv,         map:mapsTo,  solvents:IsochoricHeatCapacity]
-        - [oip:cp,         map:mapsTo,  solvents:IsobaricHeatCapacity]
+        - [oip:temp,       map:mapsTo,  emmo:ThermodynamicTemperature]
+        - [oip:press,      map:mapsTo,  emmo:Pressure]
+        - [oip:density,    map:mapsTo,  emmo:Density]
+        - [oip:volume,     map:mapsTo,  emmo:Volume]
+        - [oip:int_ene,    map:mapsTo,  emmo:InternalEnergy]
+        - [oip:enthalpy,   map:mapsTo,  emmo:Enthalpy]
+        - [oip:cv,         map:mapsTo,  emmo:IsochoricHeatCapacity]
+        - [oip:cp,         map:mapsTo,  emmo:IsobaricHeatCapacity]
         - [oip:sound_speed,map:mapsTo,  solvents:SpeedOfSound]
-        - [oip:viscosity,  map:mapsTo,  solvents:DynamicViscosity]
-        - [oip:phase,      map:mapsTo,  solvents:StateOfMatter]
+        - [oip:viscosity,  map:mapsTo,  emmo:DynamicViscosity]
+        - [oip:phase,      map:mapsTo,  emmo:StateOfMatter]
 
 
   # Simulated data for benzene, atomistic model.
@@ -50,11 +51,12 @@ data_resources:
     mapping:
       mappingType: mappings
       prefixes:
-        oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
+        oip: http://ontotrans.eu/meta/1.0/md_aa#
         map: http://emmo.info/domain-mappings#
         solvents: http://ontotrans.eu/meta/1.0/solvents# 
+        emmo: https://w3id.org/emmo#
       triples:
-        - [oip:Step,       map:mapsTo,  solvents:Step]
+        - [oip:Step,       map:mapsTo,  solvents:Steps]
         - [oip:TotEng,     map:mapsTo,  solvents:TotalEnergy]
         - [oip:E_vdwl,     map:mapsTo,  solvents:vdwlEnergy]
         - [oip:E_coul,     map:mapsTo,  solvents:CoulombEnergyShort]
@@ -63,12 +65,12 @@ data_resources:
         - [oip:E_angle,    map:mapsTo,  solvents:AngleEnergy]
         - [oip:E_dihed,    map:mapsTo,  solvents:DihedralEnergy]
         - [oip:E_impro,    map:mapsTo,  solvents:ImproperEnergy]
-        - [oip:KinEng,     map:mapsTo,  solvents:KineticEnergy]
-        - [oip:PotEng,     map:mapsTo,  solvents:PotentialEnergy]
-        - [oip:Temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
-        - [oip:Press,      map:mapsTo,  solvents:Pressure]
-        - [oip:Volume,     map:mapsTo,  solvents:Volume]
-        - [oip:Density,    map:mapsTo,  solvents:Density]
+        - [oip:KinEng,     map:mapsTo,  emmo:KineticEnergy]
+        - [oip:PotEng,     map:mapsTo,  emmo:PotentialEnergy]
+        - [oip:Temp,       map:mapsTo,  emmo:ThermodynamicTemperature]
+        - [oip:Press,      map:mapsTo,  emmo:Pressure]
+        - [oip:Volume,     map:mapsTo,  emmo:Volume]
+        - [oip:Density,    map:mapsTo,  emmo:Density]
         - [oip:c_inter,    map:mapsTo,  solvents:IntermolecularEnergy]
         - [oip:v_msdis,    map:mapsTo,  solvents:MeanSquaredDisplacement]
         - [oip:CPU,        map:mapsTo,  solvents:CPUTime]
@@ -86,22 +88,23 @@ data_resources:
     mapping:
       mappingType: mappings
       prefixes:
-        oip: http://ontotrans.eu/meta/1.0/isobaric_exp# 
+        oip: http://ontotrans.eu/meta/1.0/md_cg#
         map: http://emmo.info/domain-mappings#
         solvents: http://ontotrans.eu/meta/1.0/solvents# 
+        emmo: https://w3id.org/emmo#
       triples:
-        - [oip:Step,       map:mapsTo,  solvents:Step]
+        - [oip:Step,       map:mapsTo,  emmo:Steps]
         - [oip:TotEng,     map:mapsTo,  solvents:TotalEnergy]
         - [oip:E_vdwl,     map:mapsTo,  solvents:vdwlEnergy]
         - [oip:E_coul,     map:mapsTo,  solvents:CoulombEnergyShort]
         - [oip:E_long,     map:mapsTo,  solvents:CoulombEnergyLong]
         - [oip:E_bond,     map:mapsTo,  solvents:BondEnergy]
         - [oip:KinEng,     map:mapsTo,  solvents:KineticEnergy]
-        - [oip:PotEng,     map:mapsTo,  solvents:PotentialEnergy]
-        - [oip:Temp,       map:mapsTo,  solvents:ThermodynamicTemperature]
-        - [oip:Press,      map:mapsTo,  solvents:Pressure]
-        - [oip:Volume,     map:mapsTo,  solvents:Volume]
-        - [oip:Density,    map:mapsTo,  solvents:Density]
+        - [oip:PotEng,     map:mapsTo,  emmo:PotentialEnergy]
+        - [oip:Temp,       map:mapsTo,  emmo:ThermodynamicTemperature]
+        - [oip:Press,      map:mapsTo,  emmo:Pressure]
+        - [oip:Volume,     map:mapsTo,  emmo:Volume]
+        - [oip:Density,    map:mapsTo,  emmo:Density]
         - [oip:c_inter,    map:mapsTo,  solvents:IntermolecularEnergy]
         - [oip:c_msqdis1,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]
         - [oip:c_msqdis2,  map:mapsTo,  solvents:MeanSquaredDisplacementSingle]

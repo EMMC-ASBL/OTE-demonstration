@@ -230,51 +230,51 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en .
                        rdfs:subClassOf :ExperimentalDataset ,
                                        :Spreadsheet ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom :SpeedOfSound
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_4091d5ec_a4df_42b9_a073_9a090839279f
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_830b59f7_d047_438c_90cd_62845749efcb
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_8fc576e1_3984_402b_a548_be921b4e1bf4
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_908da3d5_775e_425e_af96_33914618eb66
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_9bbab0be_f9cc_4f46_9f46_0fd271911b79
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_ac82358d_94a7_4ceb_93e7_41bab5bcefdf
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_b9695e87_8261_412e_83cd_a86459426a28
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                         owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                          owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
                                        ] ,
                                        [ rdf:type owl:Restriction ;
@@ -311,15 +311,15 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en .
              emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A class of files covering various formats (CSV, ODS, XLS, XLSX, DIF) storing data in the form of tables."@en .
 
 
-###  http://ontotrans.eu/meta/1.0/solvents#Step
-:Step rdf:type owl:Class ;
-      rdfs:subClassOf emmo:EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 ;
-                        owl:allValuesFrom xsd:int
-                      ] ;
-      skos:prefLabel "Step" ;
-      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of repetitions of a certain task." .
+###  http://ontotrans.eu/meta/1.0/solvents#Steps
+:Steps rdf:type owl:Class ;
+       rdfs:subClassOf emmo:EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 ;
+                         owl:allValuesFrom xsd:int
+                       ] ;
+       skos:prefLabel "Steps" ;
+       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of repetitions of a certain task." .
 
 
 ###  http://ontotrans.eu/meta/1.0/solvents#Timestep
@@ -356,76 +356,76 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en .
                      rdfs:subClassOf :LAMMPSLog ,
                                      emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom :AngleEnergy
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :BondEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :CPUTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :CoulombEnergyLong
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :CoulombEnergyShort
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :DihedralEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :ImproperEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :IntermolecularEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :MeanSquaredDisplacement
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                       owl:someValuesFrom :Step
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+                                       owl:someValuesFrom :Steps
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :TotalEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom :vdwlEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                        owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+                                       owl:someValuesFrom :AngleEnergy
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty [ owl:inverseOf emmo:EMMO_24c71baf_6db6_48b9_86c8_8c70cf36db0c
@@ -446,63 +446,63 @@ c_msqdis[4] = (dx*dx + dy*dy + dz*dz)"""@en .
                          rdfs:subClassOf :LAMMPSLog ,
                                          emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :BondEnergy
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :CPUTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :CoulombEnergyLong
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :CoulombEnergyShort
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :IntermolecularEnergy
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :MeanSquaredDisplacementSingle
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
-                                           owl:someValuesFrom :Step
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+                                           owl:someValuesFrom :Steps
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :TotalEnergy
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom :vdwlEnergy
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_06448f64_8db6_4304_8b2c_e785dba82044
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_4c151909_6f26_4ef9_b43d_7c9e9514883a
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_ac540a9d_0131_43f6_a33b_17e5cfc432ed
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty emmo:EMMO_5d73661e_e710_4844_ab9b_a85b7e68576a ;
+                                           owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
                                            owl:someValuesFrom emmo:EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -575,4 +575,4 @@ emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f skos:altLabel "Temp" .
  ] .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
